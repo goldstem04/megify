@@ -219,7 +219,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -296,7 +296,6 @@ a {
     font-size: 2rem;
     outline: 0;
     padding: 1.5rem 3.5rem;
-    min-width: 100px;
 }
 
 ::placeholder {
@@ -313,6 +312,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -456,7 +456,7 @@ a {
 /* QUOTES */
 
 .quote {
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: italic;
     color: var(--color-body-darker);
     line-height: 1.3;
@@ -471,14 +471,14 @@ a {
 }
 
 .quote__author {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 400;
     font-style: normal;
     margin-bottom: 0;
 }
 
 .quote__organization {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-style: normal;
     color: var(--color-headings);
     opacity: 0.4;
@@ -487,20 +487,6 @@ a {
 .quote__line {
     position: relative;
     bottom: 10px;
-}
-
-@media screen and (min-width: 1024px) {
-    .quote {
-        font-size: 2rem;
-    }
-
-    .quote__author {
-        font-size: 2.4rem;
-    }
-
-    .quote__organization {
-        font-size: 1.6rem;
-    }
 }
 
 /* GRIDS */
@@ -528,7 +514,7 @@ a {
 }
 
 .testimonial__image {
-    position: relative
+    position: relative;
 }
 
 .testimonial__image > img {
@@ -539,6 +525,11 @@ a {
     position: absolute;
     top: 3rem;
     right: -32px;
+    transform: scale(.8);
+}
+
+.testimonial .quote {
+    margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -549,6 +540,9 @@ a {
 
     .testimonial .quote {
         margin-left: 6rem;
+    }
+    .testimonial__image > .icon-container {
+        transform: scale(1);
     }
 }
 
@@ -761,8 +755,9 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -779,10 +774,6 @@ a {
 
 /* PLAN BLOCK */
 
-.block-plan {
-    padding: 0 4rem;
-}
-
 .block-plan .grid {
     gap: 8rem 4rem;
 }
@@ -795,6 +786,7 @@ a {
 @media screen and (min-width: 1024px) {
     .block-plan {
         padding: 0;
+        margin-bottom: 6rem;
     }
 }
 
@@ -802,7 +794,7 @@ a {
 
 .feature {
     gap: 4rem 2rem;
-    margin: 12rem 0;
+    margin-bottom: 6rem;
 }
 
 .feature:first-of-type {
